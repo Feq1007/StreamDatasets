@@ -202,8 +202,6 @@ import os
 import pandas as pd
 from collections import Counter
 
-columns = ['dataset','features','classes','instances','majority', 'minority']
-info = pd.DataFrame(columns=columns)
 
 dir = 'benchmark/realworld'
 for name in os.listdir(dir):
@@ -220,7 +218,7 @@ for name in os.listdir(dir):
         'majority': max(counter.values()) / data.shape[0] * 100,
         'minority': min(counter.values()) / data.shape[0] * 100
     }
-    print(stat, sum(counter.values()))
+    print(stat))
 ```
 |    Dataset     | Features | Classes | Instances | Majority | Minority |
 |:--------------:|:--------:|:-------:|:---------:|:--------:|:--------:|
